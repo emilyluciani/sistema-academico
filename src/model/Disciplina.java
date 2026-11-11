@@ -7,16 +7,16 @@ public class Disciplina {
     private String nome;
     private String ementa;
     private int cargaHoraria;
-    private String curso;
-    private List<String> matricula;
+    private Curso curso;
+    private List<Matricula> matriculas;
 
-    public Disciplina (String codigoDisciplina, String nome, String ementa, int cargaHoraria, String curso, List<String> matricula){
+    public Disciplina (String codigoDisciplina, String nome, String ementa, int cargaHoraria, Curso curso, List<Matricula> matriculas){
         this.codigoDisciplina = codigoDisciplina;
         this.nome = nome;
         this.ementa = ementa;
         this.cargaHoraria = cargaHoraria;
         this.curso = curso;
-        this.matricula = new ArrayList<>(matricula);
+        this.matriculas = new ArrayList<>(matriculas);
     }
 
     public String getCodigoDisciplina() {
@@ -35,24 +35,33 @@ public class Disciplina {
         return cargaHoraria;
     }
 
-    public String getCurso() {
+    public Curso getCurso() {
         return curso;
     }
 
-    public List<String> getMatricula() {
-        return matricula;
+    public List<Matricula> getMatriculas() {
+        return new ArrayList<>(matriculas);
     }
 
     public void setCargaHoraria(int cargaHoraria){
         this.cargaHoraria = cargaHoraria;
     }
 
-    public void setCurso (String curso){
+    public void setCurso (Curso curso){
         this.curso = curso;
     }
 
-    public void setMatricula (List<String> matricula){
-        this.matricula = new ArrayList<>(matricula);
+    public void setMatriculas (List<Matricula> matriculas){
+        this.matriculas = new ArrayList<>(matriculas);
     }
+
+    public int consultarCargaHoraria(){
+        return cargaHoraria;
+    }
+
+    public String consultarEmenta(){
+        return ementa;
+    }
+
 }
 
