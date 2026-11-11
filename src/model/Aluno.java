@@ -47,4 +47,13 @@ public class Aluno extends Pessoa{
     public void setDisciplinas(ArrayList<Disciplina> disciplinas) {
         this.disciplinas = disciplinas;
     }
+    public boolean matricular(Turma turma) {
+        if (turma == null || turmas.contains(turma)) {
+            return false;
+        }
+        if (!curso.equals(turma.getCurso())) {return false;
+        }
+        turmas.add(turma);
+        return true;
+    }
 }
