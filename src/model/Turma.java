@@ -3,9 +3,9 @@ package model;
 public class Turma {
     private String codigo;
     private int semestre;
-    private String curso;
+    private Curso curso;
 
-    public Turma (String codigo, int semestre, String curso){
+    public Turma (String codigo, int semestre, Curso curso){
         this.codigo = codigo;
         this.semestre = semestre;
         this.curso = curso;
@@ -27,8 +27,9 @@ public class Turma {
         this.semestre = semestre;
     }
 
-    public void setCurso(String curso){
+    public void setCurso(Curso curso){
         this.curso = curso;
     }
+
 }
 

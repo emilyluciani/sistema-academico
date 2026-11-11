@@ -5,17 +5,17 @@ import java.util.List;
 public class Curso {
     private String codigo;
     private String nome;
-    private String coordenador;
-    private List<String> disciplina;
-    private List<String> turma;
+    private Coordenador coordenador;
+    private List<Disciplina> disciplinas;
+    private List<Turma> turmas;
 
-   public Curso(String codigo, String nome, String coordenador, List<String> disciplina, List<String> turma){
-       this.codigo = codigo;
-       this.nome = nome;
-       this.coordenador = coordenador;
-       this.disciplina = new ArrayList<>(disciplina);
-       this.turma = new ArrayList<>(turma);
-   }
+    public Curso(String codigo, String nome, Coordenador coordenador, List<Disciplina> disciplinas, List<Turmas> turmas) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.coordenador = coordenador;
+        this.disciplina = new ArrayList<>(disciplina);
+        this.turma = new ArrayList<>(turma);
+    }
 
     public String getCodigo() {
         return codigo;
@@ -29,19 +29,41 @@ public class Curso {
         return coordenador;
     }
 
-    public List<String> getDisciplina() {
+    public List<Disciplina> getDisciplinas() {
         return disciplina;
     }
 
-    public List<String> getTurma() {
+    public List<Turma> getTurmas() {
         return turma;
     }
 
-    public void setDisciplina(List<String> disciplina) {
-       this.disciplina = new ArrayList<>(disciplina);
+    public void setDisciplina(List<Disciplina> disciplinas) {
+        this.disciplina = new ArrayList<>(disciplinas);
     }
 
-    public void setTurma(List<String> turma){
-       this.turma = new ArrayList<>(turma);
+    public void setTurma(List<Turma> turmas) {
+        this.turma = new ArrayList<>(turma);
+    }
+
+    public void adicionarDisciplina(Disciplina disciplina) {
+
+    }
+
+    public void removerDisciplina(Disciplina disciplina) {
+
+    }
+
+    public void adicionarTurma(Turma turma) {
+
+    }
+
+    public List<Disciplina> consultarDisciplina() {
+
+    }
+
+    public void definirCoordenador(Coordenador coordenador) {
+
     }
 }
+
+
